@@ -1,25 +1,26 @@
 /**
- * OOPSBannerApp UC2 – Banner Display Application
+ * OOPSBannerApp UC3 – OOPS Banner Application (Use Case 3)
  *
- * This class demonstrates the creation of a visual banner displaying
- * the word "OOPS" using ASCII art composed of asterisks (*) and spaces.
- * Each line is printed using individual print statements.
+ * This class improves UC2 by replacing string concatenation (+)
+ * with the String.join() method to build each banner line.
+ * This approach reduces intermediate string objects and
+ * improves memory efficiency while keeping the same output.
  *
  * @author Sarvesh
- * @version 2
+ * @version 3.0
  */
 
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        System.out.println("  *****   " + "  *****   " + " ******  " + " *****  ");
-        System.out.println(" *     *  " + " *     *  " + " *     * " + "*     * ");
-        System.out.println(" *     *  " + " *     *  " + " *     * " + "*       ");
-        System.out.println(" *     *  " + " *     *  " + " ******  " + " *****  ");
-        System.out.println(" *     *  " + " *     *  " + " *       " + "      * ");
-        System.out.println(" *     *  " + " *     *  " + " *       " + "*     * ");
-        System.out.println("  *****   " + "  *****   " + " *       " + " *****  ");
+        System.out.println(String.join(" ", " ***** ", " ***** ", " ****** ", " ***** "));
+        System.out.println(String.join(" ", "*     *", "*     *", "*     *", "*     *"));
+        System.out.println(String.join(" ", "*     *", "*     *", "*     *", "*     "));
+        System.out.println(String.join(" ", "*     *", "*     *", "****** ", " ***** "));
+        System.out.println(String.join(" ", "*     *", "*     *", "*      ", "     *"));
+        System.out.println(String.join(" ", "*     *", "*     *", "*      ", "*    *"));
+        System.out.println(String.join(" ", " ***** ", " ***** ", "*      ", " **** "));
 
     }
 }
